@@ -1,0 +1,28 @@
+<html> 
+<head> 
+<script> 
+
+function changeImage()
+{
+var img = document.getElementById("image");
+var button = document.getElementById("clickme");
+if (button.value == 'c'){
+	img.src="/static/sc.png";
+	button.innerHTML = 'Click to see the distribution by continent.'
+	button.value = 'sc'
+} else{
+	img.src="/static/c.png";
+	button.innerHTML = 'Click to see the distribution by sub-continent.'
+	button.value = 'c'
+}
+return false;
+}
+
+</script>
+
+</head>
+<body>
+<button id="clickme" value='c' onclick="changeImage();">Click to see the distribution by sub-continent</button>
+<img id="image" src="/static/c.png" />
+</body>
+</html>
